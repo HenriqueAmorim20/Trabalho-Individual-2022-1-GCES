@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  postgres:
+    image: postgres:14.5
+    restart: always
+    env_file:
+      - .env
+    volumes:
+      - ./db:/docker-entrypoint-initdb.d/
+    ports:
+      - "${POSTGRES_PORT}:${POSTGRES_PORT}"
