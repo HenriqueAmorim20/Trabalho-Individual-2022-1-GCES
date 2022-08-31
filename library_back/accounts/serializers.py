@@ -7,6 +7,7 @@ class UserSerializer(ModelSerializer):
         model = User
         fields = ('username', 'email', 'first_name', 'last_name')
 
+
 class RegisterSerializer(ModelSerializer):
     password = CharField(max_length=128, min_length=6, write_only=True)
 

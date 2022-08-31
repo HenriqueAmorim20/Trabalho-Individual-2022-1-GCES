@@ -26,7 +26,7 @@ class Migration(migrations.Migration):
                 ('author', models.CharField(max_length=150)),
                 ('release_year', models.PositiveIntegerField()),
                 ('is_rented', models.BooleanField(default=False)),
-                ( 'renter', models.ForeignKey(
+                ('renter', models.ForeignKey(
                     blank=True,
                     default=None,
                     null=True,
