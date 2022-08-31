@@ -6,6 +6,7 @@ from rest_framework.response import Response
 from .models import Book
 from .serializers import BookSerializer
 
+
 class BookViewSet(ModelViewSet):
     serializer_class = BookSerializer
     # permission_classes = [IsAuthenticated]
