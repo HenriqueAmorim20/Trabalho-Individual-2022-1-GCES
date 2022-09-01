@@ -1,5 +1,6 @@
-name: GitHub Actions Demo
+name: CI Trabalho Individual
 on: [push]
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -49,6 +50,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+
       - name: Creating .env
         working-directory: ./library_back
         run: |
@@ -58,12 +60,15 @@ jobs:
           echo POSTGRES_HOST=db >> .env
           echo POSTGRES_PORT=5432 >> .env
           cat .env
+
       - name: Instalacao flake
         working-directory: ./
         run: bash -c "pip install flake8"
+
       - name: Executando lint no backend
         working-directory: ./
         run: bash -c "flake8 --max-line-length 99 library_back"
+
       - name: Executando lint no frontend
         working-directory: ./
         run: bash -c "flake8 library_front"
