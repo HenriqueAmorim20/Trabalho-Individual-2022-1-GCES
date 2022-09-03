@@ -1,4 +1,4 @@
-name: CI Trabalho Individual
+name: CI
 on: [push]
 
 jobs:
