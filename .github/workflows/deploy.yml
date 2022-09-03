@@ -17,7 +17,7 @@ jobs:
       - name: Backend image
         uses: mr-smithers-excellent/docker-build-push@v5
         with:
-          image: HenriqueAmorim20/Trabalho-Individual-2022-1-GCES
+          image: henriqueamorim20/trabalho-gces
           registry: docker.io
           directory: ./library_back
           dockerfile: ./library_back/Dockerfile
@@ -28,7 +28,7 @@ jobs:
       - name: Frontend image
         uses: mr-smithers-excellent/docker-build-push@v5
         with:
-          image: HenriqueAmorim20/Trabalho-Individual-2022-1-GCES
+          image: henriqueamorim20/trabalho-gces
           registry: docker.io
           directory: ./library_front
           dockerfile: ./library_front/Dockerfile
